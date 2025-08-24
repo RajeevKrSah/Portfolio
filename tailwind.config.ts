@@ -7,22 +7,13 @@ export default {
   ],
   theme: {
     extend: {
-      keyframes: {
-        slowbounce: {
-          '0%, 100%': { transform: 'translateY(-5%)', animationTimingFunction: 'cubic-bezier(0.8,0,1,1)' },
-          '50%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0,0,0.2,1)' },
-        },
-      },
-      animation: {
-        slowbounce: 'slowbounce 1.5s infinite',
-      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          light: "#F3F4F6",
-          medium: "#16171b",
-          dark: "#000000",
+          light: "#665544",
+          medium: "#e6007a",
+          dark: "#255c56",
         },
       },
     },

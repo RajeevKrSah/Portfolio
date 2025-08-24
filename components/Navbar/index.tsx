@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { GoArrowUpRight } from "react-icons/go";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -38,12 +39,9 @@ export default function Navbar() {
     <nav className="bg-white shadow-md border-b border-gray-100 text-gray-800">
       <div className="container mx-auto flex justify-between items-center h-20 px-4 lg:px-0">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-400 w-9 h-9 flex items-center justify-center rounded-md">
-            <span className="text-white font-bold text-lg">P</span>
-          </div>
+        <Link href="/">
           <span className="font-extrabold text-xl tracking-wide">
-            Portfolio
+            Portfolio.
           </span>
         </Link>
 
@@ -57,14 +55,14 @@ export default function Navbar() {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               {item.dropdown ? (
-                <button className="flex items-center gap-1 text-sm font-medium hover:text-[#e6007a] transition">
+                <button className="flex items-center gap-1 text-sm font-medium hover:text-primary-medium transition">
                   {item.label}
                   <ChevronDown size={16} />
                 </button>
               ) : (
                 <Link
                   href={item.href!}
-                  className="text-sm font-medium hover:text-[#e6007a] transition"
+                  className="text-sm font-medium hover:text-primary-medium transition"
                 >
                   {item.label}
                 </Link>
@@ -81,7 +79,7 @@ export default function Navbar() {
                     <Link
                       key={link.label}
                       href={link.href}
-                      className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-[#e6007a]"
+                      className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary-medium"
                     >
                       {link.label}
                     </Link>
@@ -94,9 +92,9 @@ export default function Navbar() {
           {/* Get Started (Desktop) */}
           <Link
             href="/get-started"
-            className="ml-6 px-5 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold shadow hover:bg-blue-700 transition"
+            className="ml-6 px-5 py-3 rounded-full bg-primary-dark text-white text-sm font-semibold shadow hover:bg-primary-dark/90 transition"
           >
-            Get Started
+            Get Started <GoArrowUpRight size={16} className="ml-2 inline-block text-white" />
           </Link>
         </div>
 
@@ -118,11 +116,10 @@ export default function Navbar() {
           >
             {/* Header */}
             <div className="flex justify-between items-center p-4 border-b">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-400 w-8 h-8 flex items-center justify-center rounded-md">
-                  <span className="text-white font-bold">A</span>
-                </div>
-                <span className="font-bold text-lg">Apexithub</span>
+              <Link href="/">
+                <span className="font-extrabold text-xl tracking-wide">
+                  Portfolio.
+                </span>
               </Link>
               <button onClick={() => setMobileOpen(false)}>
                 <X size={24} />
@@ -156,7 +153,7 @@ export default function Navbar() {
                             <Link
                               key={link.label}
                               href={link.href}
-                              className="block px-6 py-3 text-sm hover:bg-gray-100 hover:text-[#e6007a]"
+                              className="block px-6 py-3 text-sm hover:bg-gray-100 hover:text-primary-medium"
                             >
                               {link.label}
                             </Link>
@@ -180,9 +177,9 @@ export default function Navbar() {
             <div className="p-4 border-t">
               <Link
                 href="/get-started"
-                className="block w-full text-center px-5 py-3 rounded-full bg-blue-600 text-white text-base font-semibold shadow hover:bg-blue-700 transition"
+                className="block w-full text-center px-5 py-3 rounded-full bg-primary-dark text-white text-base font-semibold shadow hover:bg-primary-dark/90 transition"
               >
-                Get Started
+                Get Started <GoArrowUpRight size={16} className="ml-2 inline-block text-white" />
               </Link>
             </div>
           </motion.div>

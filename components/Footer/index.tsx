@@ -38,11 +38,11 @@ const Footer = () => {
               Building scalable, accessible, and high-performance applications for the modern web.
             </p>
             <div className="flex space-x-5">
-              <FaInstagram className="w-6 h-6 hover:text-[#e6007a] transition-all duration-300 cursor-pointer" />
-              <FaTwitter className="w-6 h-6 hover:text-[#e6007a] transition-all duration-300 cursor-pointer" />
-              <FaLinkedin className="w-6 h-6 hover:text-[#e6007a] transition-all duration-300 cursor-pointer" />
-              <FaFacebook className="w-6 h-6 hover:text-[#e6007a] transition-all duration-300 cursor-pointer" />
-              <FaGithub className="w-6 h-6 hover:text-[#e6007a] transition-all duration-300 cursor-pointer" />
+              <FaInstagram className="w-6 h-6 hover:text-primary-medium transition-all duration-300 cursor-pointer" />
+              <FaTwitter className="w-6 h-6 hover:text-primary-medium transition-all duration-300 cursor-pointer" />
+              <FaLinkedin className="w-6 h-6 hover:text-primary-medium transition-all duration-300 cursor-pointer" />
+              <FaFacebook className="w-6 h-6 hover:text-primary-medium transition-all duration-300 cursor-pointer" />
+              <FaGithub className="w-6 h-6 hover:text-primary-medium transition-all duration-300 cursor-pointer" />
             </div>
           </div>
 
@@ -54,7 +54,7 @@ const Footer = () => {
                 <li key={ql.name}>
                   <Link
                     href={ql.href}
-                    className="hover:text-[#e6007a] transition-colors duration-300 tracking-[0.05em]"
+                    className="hover:text-primary-medium transition-colors duration-300 tracking-[0.05em]"
                   >
                     {ql.name}
                   </Link>
@@ -72,7 +72,7 @@ const Footer = () => {
                 <li key={pl.name}>
                   <Link
                     href={pl.href}
-                    className="hover:text-[#e6007a] transition-colors duration-300 tracking-[0.05em]"
+                    className="hover:text-primary-medium transition-colors duration-300 tracking-[0.05em]"
                   >
                     {pl.name}
                   </Link>
@@ -110,16 +110,16 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/[0.08] pt-10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-[11px] opacity-50 tracking-[0.05em] font-light">
-            © 2024 <span className="text-[#e6007a]">Rajeev Kumar </span>. All rights reserved.
+            © 2024 <span className="text-primary-medium">Rajeev Kumar </span>. All rights reserved.
           </p>
           <div className="flex space-x-8 text-[11px] opacity-50 font-light">
-            <a href="#" className="hover:text-[#e6007a] transition-colors duration-300 tracking-[0.05em]">
+            <a href="#" className="hover:text-primary-medium transition-colors duration-300 tracking-[0.05em]">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-[#e6007a] transition-colors duration-300 tracking-[0.05em]">
+            <a href="#" className="hover:text-primary-medium transition-colors duration-300 tracking-[0.05em]">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-[#e6007a] transition-colors duration-300 tracking-[0.05em]">
+            <a href="#" className="hover:text-primary-medium transition-colors duration-300 tracking-[0.05em]">
               Cookie Policy
             </a>
           </div>

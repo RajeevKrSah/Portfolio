@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rajeev Kumar",
-  description: "My Portfolio website",
+  title: "Portfolio website - Rajeev Kumar Sah",
+  description: "A modern, responsive personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion - showcasing my projects, skills, and professional journey.",
 };
 
 export default function RootLayout({
