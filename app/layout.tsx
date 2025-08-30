@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+"use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
+import Preloader from "@/components/Common/Preloader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,24 +16,34 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Portfolio website - Rajeev Kumar Sah",
-  description: "A modern, responsive personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion - showcasing my projects, skills, and professional journey.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        {isLoading ? (
+          <Preloader />
+        ) : (
+          <>
+            <Navbar />
+            {children}
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );
